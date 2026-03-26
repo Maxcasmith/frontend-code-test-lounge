@@ -27,6 +27,7 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   iconLeft?: IconName;
   iconRight?: IconName;
   disabled?: boolean;
+  isLoading?: boolean;
   onClick?: () => Promise<void>;
 }
 

@@ -67,3 +67,37 @@ export const Ghost: Story = {
       }),
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    variant: "primary",
+    children: "Disabled Button",
+    size: "small",
+    disabled: true,
+    onClick: () =>
+      new Promise((res) => {
+        console.log("Loading...");
+        setTimeout(() => {
+          console.log("Hello Lounge");
+          res();
+        }, 1000);
+      }),
+  },
+};
+
+export const Large: Story = {
+  args: {
+    variant: "secondary",
+    children: "Large Button",
+    size: "large",
+    disabled: false,
+    onClick: () =>
+      new Promise((res) => {
+        console.log("Loading...");
+        setTimeout(() => {
+          console.log("Hello Lounge");
+          res();
+        }, 1000);
+      }),
+  },
+};
