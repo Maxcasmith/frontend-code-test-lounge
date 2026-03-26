@@ -1,7 +1,56 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   TODO:
   - Add Button component styles and variants.
   - Add loading and disabled state styles.
 */
+
+/*
+ * I added this class to use your specific configuration but I may attempt a full tailwind approach
+ */
+.button {
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  height: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/*
+ * I did do a tailwind approach
+ */
+
+@theme {
+  --color-button-background-primary: #000;
+  --color-button-background-primary-hover: #b0b0b0;
+
+  --color-button-text-primary: #fff;
+
+  --color-button-border-primary-focus: #3d3d3d;
+
+  --color-button-background-secondary: #fff;
+  --color-button-background-secondary-hover: #b0b0b0;
+
+  --color-button-text-secondary: #fff;
+
+  --color-button-border-secondary: #e7e7e7;
+  --color-button-border-secondary-focus: #000;
+
+  --color-button-background-ghost-hover: #f6f6f6;
+  --color-button-border-ghost-focus: #3d3d3d;
+
+  --color-button-background-disabled: #e7e7e7;
+  --color-button-text-disabled: #b0b0b0;
+}
